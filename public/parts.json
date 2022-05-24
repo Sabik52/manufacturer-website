@@ -1,60 +1,60 @@
 [
     {
       "_id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
-      "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org"
+      "name": "RAM MEMORY",
+      "description": "Random access memory (RAM) is a computer's short-term memory, which it uses to handle all active tasks and apps. None of your programs, files, games, or streams would work without RAM",
+      "price": "800",
+      "quantity": "500",
+      "img": "https://i.ibb.co/3sJpPnM/1.png"
    
     },
     {
       "_id": 2,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net"
+      "name": "SSD CARD",
+      "description": "A storage device is any type of computing hardware that is used for storing, porting or extracting data files and objects. Storage devices can hold and store information both temporarily and permanently.",
+      "price": "800",
+      "quantity": "1000",
+      "img": "https://i.ibb.co/XkY2nHq/2.png"
     },
     {
       "_id": 3,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net"
+      "name": "CASE",
+      "description": "In the modern era, the casing is a very important element of desktop PC that is often known as case, chassis, tower, system unit, cabinet,, or base unit.",
+      "price": "800",
+      "quantity": "600",
+      "img": "https://i.ibb.co/1nd88h2/3.png"
     },
     {
       "_id": 4,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net"
+      "name": "POWER SUPPLY",
+      "description": "The power supply unit or PSU for PC converts AC to low-voltage regulated DC power for the internal components of a computer.",
+      "price": "800",
+      "quantity": "1200",
+      "img": "https://i.ibb.co/zSmC6dj/4.png"
     },
     {
       "_id": 5,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net"
+      "name": "GRAPHICS CARD",
+      "description": "Ultimate NVIDIA and AMD Graphics Cards price in BD including XFX, Asus, Gigabyte, MSI. Shop at the best GPU price in BD online or visit your nearest Star",
+      "price": "800",
+      "quantity": "1500",
+      "img": "https://i.ibb.co/64jz2wK/5.png"
     },
     {
       "_id": 6,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net"
+      "name": "Mouse",
+      "description": "A mouse is a small device that a computer user pushes across a desk surface in order to point to a place on a display screen and to select one or more actions to take from that position. ",
+      "price": "800",
+      "quantity": "700",
+      "img": "https://i.ibb.co/p3CnP74/6.png"
     },
     {
       "_id": 7,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net"
+      "name": "Hard Disk",
+      "description": "Hard disks are flat circular plates made of aluminum or glass and coated with a magnetic material. Hard disks for personal computers can store terabytes (trillions of bytes) of information",
+      "price": "800",
+      "quantity": "900",
+      "img": "https://i.ibb.co/0mXVGVV/7.png"
     }
     
 ]
