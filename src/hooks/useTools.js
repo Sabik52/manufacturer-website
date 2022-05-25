@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const useTool = ()=>{
     const [tool, setTool] = useState([]);
     useEffect(() => {
-        fetch ('parts.json')
+        fetch ('http://localhost:5000/part')
         .then(res => res.json())
         .then(data => setTool(data));
     },[])
