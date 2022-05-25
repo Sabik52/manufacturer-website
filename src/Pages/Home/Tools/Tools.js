@@ -10,7 +10,7 @@ const Tools = () => {
 
             <div className='grid lg:grid-cols-3 gap-4 mt-4 justify-items-center'>
                    {
-                tools.map (tool => <Tool
+                tools.slice(0, 6).map (tool => <Tool
                 key={tool.id}
                 tool = {tool}
                 ></Tool>)

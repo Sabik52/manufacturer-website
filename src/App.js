@@ -4,6 +4,7 @@ import Home from './Pages/Home/Home/Home';
 import Tools from './Pages/Home/Tools/Tools';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import Purschase from './Pages/Purchase/Purschase';
 import Navbar from './Pages/Shared/Navbar/Navbar';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
        <Route path='/tools' element={<Tools></Tools>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/register' element={<Register></Register>}></Route>
+       <Route path='/purchase' element={<Purschase></Purschase>}></Route>
      </Routes>
     </div>
   );
