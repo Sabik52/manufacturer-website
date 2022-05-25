@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Tool.css'
 
 
-const Tool = ({tool}) => {
+const Tool = ({tool, setPurchase}) => {
     const {id, name, img, description, price, quantity} = tool;
     const navigate = useNavigate();
     const navigateToPurchaseDetail = id => {
@@ -22,7 +22,7 @@ const Tool = ({tool}) => {
                 <p>{description}</p>
                 </div>
                 <div class="card-actions justify-center">
-                    <button onClick={() => navigateToPurchaseDetail(id)} className='btn bg-secondary  text-black font-bold'>Purchase</button>
+                    <label className='btn bg-secondary font-bold text-black' for="purchase-modal" onClick={() => setPurchase(tool)}>Purchase</label>
                 </div>
             </div>
         </div>
