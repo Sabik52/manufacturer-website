@@ -2,7 +2,7 @@ import React from 'react';
 import google from '../../../Images/logo/google.png'
 
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Spinner from '../../Shared/Spinner/Spinner';
@@ -20,15 +20,20 @@ const Login = () => {
         formState: { errors },
     } = useForm();
 
- let signInError;   
+ let signInError; 
+ const navigate = useNavigate();
+ const location= useLocation();
+ let from= location.state?.from?.pathname || "/";
+
+ 
 if(loading || gLoading){
     return <Spinner></Spinner>
 }
 if(error || gError){
     signInError = <p className='text-red-500'> { error?.message || gError.message}</p>
 }
-    if (user) {
-        console.log(gUser)
+    if (user || gUser) {
+        navigate(from, {replace:true});
     }
     const onSubmit = (data) => {
         console.log(data)
