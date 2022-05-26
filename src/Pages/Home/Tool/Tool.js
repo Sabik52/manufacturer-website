@@ -5,10 +5,8 @@ import './Tool.css'
 
 const Tool = ({tool, setPurchase}) => {
     const {id, name, img, description, price, quantity} = tool;
-    const navigate = useNavigate();
-    const navigateToPurchaseDetail = id => {
-        navigate(`/purchase`)
-    }
+    
+    
 
     return (
         <div className=''>
@@ -19,10 +17,11 @@ const Tool = ({tool, setPurchase}) => {
                 <h2 class="card-title">{name}</h2>
                 <h3>Price:${price}</h3>
                 <h4>Available Quantity: {quantity}</h4>
+                <h5>Minimum Order Quantity: 500 </h5>
                 <p>{description}</p>
                 </div>
                 <div class="card-actions justify-center">
-                    <label className='btn bg-secondary font-bold text-black' for="purchase-modal" onClick={() => setPurchase(tool)}>Purchase</label>
+                     <label className='btn bg-secondary font-bold text-black' for="purchase-modal" onClick={() => setPurchase(tool)}>Purchase</label>
                 </div>
             </div>
         </div>

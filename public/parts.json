@@ -8,14 +8,7 @@
       "img": "https://i.ibb.co/3sJpPnM/1.png"
    
     },
-    {
-     
-      "name": "SSD CARD",
-      "description": "A storage device is any type of computing hardware that is used for storing, porting or extracting data files and objects. Storage devices can hold and store information both temporarily and permanently.",
-      "price": "800",
-      "quantity": "1000",
-      "img": "https://i.ibb.co/XkY2nHq/2.png"
-    },
+  
     {
       "_id": 3,
       "name": "CASE",
@@ -55,6 +48,14 @@
       "price": "800",
       "quantity": "900",
       "img": "https://i.ibb.co/0mXVGVV/7.png"
+    },
+    {
+      "_id": 8,
+      "name": "SSD CARD",
+      "description": "A storage device is any type of computing hardware that is used for storing, porting or extracting data files and objects. Storage devices can hold and store information both temporarily and permanently.",
+      "price": "800",
+      "quantity": "1000",
+      "img": "https://i.ibb.co/XkY2nHq/2.png"
     }
     
 ]

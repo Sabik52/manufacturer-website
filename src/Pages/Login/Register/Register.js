@@ -39,7 +39,7 @@ if(error || updateError){
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile ({displayName: data.name})
         console.log('profile update successfully')
-        navigate('/purchase')
+        navigate('/tools')
 
     };
     return (
@@ -48,7 +48,7 @@ if(error || updateError){
             <div class="card-body">
                 <h2 class="card-title">Please Register!</h2>
                 <form className='mt-2' onSubmit={handleSubmit(onSubmit)}>
-                    <input required className="input input-bordered w-full max-w-xs text-black " type='text' placeholder='Your Name' {...register('firstName')} /> <br />
+                    <input required className="input input-bordered w-full max-w-xs text-black " type='text' placeholder='Your Name' {...register('name')} /> <br />
                     <input required className="input input-bordered w-full max-w-xs mt-2 text-black" type='email' placeholder='Your Email' {...register('email', { required: true })} /> <br />
                     {errors.lastName && <p>Email is required.</p>}
                     <input required className="input input-bordered w-full max-w-xs mt-2 text-black" type='password' placeholder='Password' {...register('password')} />
