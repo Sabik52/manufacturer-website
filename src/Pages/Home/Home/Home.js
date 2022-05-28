@@ -5,6 +5,7 @@ import BestProduct from '../BestProduct/BestProduct';
 import NewDeal from '../NewDeal/NewDeal';
 import Stat from '../Stat/Stat';
 import Tools from '../Tools/Tools';
+import Review from './Review/Review';
 import Summary from './Summary/Summary';
 
 
@@ -17,6 +18,7 @@ const Home = () => {
            <BestProduct></BestProduct>
            <Stat></Stat>
            <NewDeal></NewDeal>
+           <Review></Review>
            <Summary></Summary>
            <Footer></Footer>
            
