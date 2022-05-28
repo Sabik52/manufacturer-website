@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import useTool from '../../../hooks/useTools';
 import Tool from '../Tool/Tool';
 import PurchaseModal from './PurchaseModal';
@@ -15,11 +16,12 @@ const Tools = () => {
                 tools.slice(0, 6).map (tool => <Tool
                 key={tool.id}
                 tool = {tool}
-                setPurchase= {setPurchase}
+                // setPurchase= {setPurchase}
                 ></Tool>)
             }
             </div>
-            {purchase && <PurchaseModal purchase={purchase}></PurchaseModal>}
+            {/* {purchase && <PurchaseModal purchase={purchase}></PurchaseModal>} */}
+            <button> <Link to="/products">All Products</Link></button>
          
         </div>
     );

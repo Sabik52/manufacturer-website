@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import google from '../../../Images/logo/google.png'
 
 import { useForm } from 'react-hook-form';
@@ -7,6 +7,8 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import auth from '../../../firebase.init';
 import Spinner from '../../Shared/Spinner/Spinner';
 
+import useToken from '../../../hooks/useToken';
+
 
 
 
@@ -14,6 +16,7 @@ const Login = () => {
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [signInWithEamilAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+    const [token] = useToken(user || gUser)
     const {
         register,
         handleSubmit,
@@ -24,7 +27,14 @@ const Login = () => {
  const navigate = useNavigate();
  const location= useLocation();
  let from= location.state?.from?.pathname || "/";
-
+ 
+ 
+ useEffect(()=> {
+    if(token) {
+        navigate(from, {replace:true});
+    }
+   
+}) 
  
 if(loading || gLoading){
     return <Spinner></Spinner>
@@ -32,9 +42,9 @@ if(loading || gLoading){
 if(error || gError){
     signInError = <p className='text-red-500'> { error?.message || gError.message}</p>
 }
-    if (user || gUser) {
-        navigate(from, {replace:true});
-    }
+    
+      
+    
     const onSubmit = (data) => {
         console.log(data)
         signInWithEamilAndPassword(data.email, data.password)
