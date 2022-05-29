@@ -8,7 +8,7 @@ import Tool from '../Tool/Tool';
 
 const Tools = () => {
     const [tools, setTools] =useTool();
-    const [purchase, setPurchase]= useState(null)
+    const [order, setOrder]= useState(null)
     return (
         <div>
             <h1 className=' my-4 text-5xl font-bold'>Our Parts</h1>
@@ -18,11 +18,14 @@ const Tools = () => {
                 tools.slice(0, 6).map (tool => <Tool
                 key={tool.id}
                 tool = {tool}
-                setPurchase= {setPurchase}
+                setOrder= {setOrder}
                 ></Tool>)
             }
             </div>
-              {purchase && <Link><OrderModal purchase={purchase}></OrderModal></Link>}
+              {order && <OrderModal 
+              order={order}
+              setOrder= {setOrder}
+              ></OrderModal>}
 
             <button className='btn bg-cyan-500 font-bold text-white mt-8 mb-5' > <Link to="/products">See All Products</Link></button>
          

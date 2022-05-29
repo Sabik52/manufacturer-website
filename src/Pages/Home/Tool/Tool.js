@@ -4,7 +4,7 @@ import React from 'react';
 import './Tool.css'
 
 
-const Tool = ({tool, setPurchase}) => {
+const Tool = ({tool, setOrder}) => {
     const {_id, name, img, description, price, quantity} = tool;
 
     
@@ -17,14 +17,16 @@ const Tool = ({tool, setPurchase}) => {
                 <div className='text-left card-content'>
                 <h2 class="card-title">{name}</h2>
                 <h3>Price:${price}</h3>
-                <h4>Available Quantity: {quantity}</h4>
+                    <h4>Available Quantity: {quantity}</h4>
+            
                 <h5>Minimum Order Quantity: 500 </h5>
                 <p>{description}</p>
                 </div>
                 <div class="card-actions justify-center">
-                <button onClick={()=> setPurchase(tool)} className='btn bg-cyan-500 font-bold text-white'  > Purchase
-                </button>
             
+                <label for="order-modal"
+                onClick={()=> setOrder(tool)} 
+                className='btn bg-cyan-500 font-bold text-white  btn-modal-button'>Purchase</label>
                      
                 </div>
                
