@@ -11,7 +11,7 @@ const Navbar = () => {
     localStorage.removeItem('accessToken');
   }
   return (
-    <div class="navbar  bg-primary text-white">
+    <div class="navbar  bg-cyan-500 text-white">
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -29,9 +29,11 @@ const Navbar = () => {
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal p-0">
-          <li><Link to='/home'>Home</Link></li>
-          <li><Link to='/products'>Products</Link></li>
-          <li><Link to='/about'>About</Link></li>
+        <li><Link to='/home'>Home</Link></li>
+            <li><Link to='/purchase'>Purchase</Link></li>
+            <li><Link to='/parts'>Parts</Link></li>
+            <li><Link to='/about'>About</Link></li>
+            <li> <Link to='/myprotfolio'>My Protfolio</Link></li>
          {
            user && <li><Link to='/dashboard'>Dashboard</Link></li>
          }

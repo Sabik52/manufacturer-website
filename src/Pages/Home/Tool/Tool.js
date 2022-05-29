@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+
 import './Tool.css'
 
 
 const Tool = ({tool, setPurchase}) => {
-    const {id, name, img, description, price, quantity} = tool;
-    
+    const {_id, name, img, description, price, quantity} = tool;
+
     
 
     return (
@@ -21,12 +22,16 @@ const Tool = ({tool, setPurchase}) => {
                 <p>{description}</p>
                 </div>
                 <div class="card-actions justify-center">
-                <button className='btn bg-secondary font-bold text-black' > <Link to="/products">Purchase</Link></button>
+                <button onClick={()=> setPurchase(tool)} className='btn bg-cyan-500 font-bold text-white'  > Purchase
+                </button>
+            
                      
                 </div>
+               
               
             </div>
         </div>
+       
         </div>
     );
 };

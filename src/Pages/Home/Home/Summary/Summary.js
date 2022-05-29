@@ -9,8 +9,8 @@ const Summary = () => {
       <div>
         
         <h1 className='text-5xl font-bold text-red-800 mt-3'>Our Business Statagy</h1>
-        <div class="flex w-full gap-3 mt-3">
-      <div class=" h-56 flex-grow justify-center card  rounded-box place-items-center">
+        <div class="flex  lg:w-full gap-3 mt-3">
+      <div class=" h-56  flex-grow justify-center card rounded-box place-items-center">
     
       <p className='text-4xl'><FaUsers/></p>
      <h1 className='text-6xl font-bold text-cyan-500'>199k+</h1>

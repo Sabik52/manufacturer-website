@@ -10,7 +10,7 @@ const Banner = () => {
     <div class="max-w-lg">
       <h1 class="mb-5 text-5xl font-bold">Welcome to CompuCare</h1>
       <p class="mb-5">We Care Your Laptop, Desktop <br /> All types of Computer</p>
-      <button class="btn btn-primary">Get Started</button>
+      <button class="btn bg-cyan-500">Get Started</button>
     </div>
   </div>
 </div>

@@ -14,6 +14,11 @@ import MyReview from './Pages/Home/Tools/Dashboard/MyReview';
 import Footer from './Pages/Shared/Footer/Footer';
 import Products from './Pages/Products/Products';
 import MyProfile from './Pages/Home/Tools/Dashboard/MyProfile';
+import NotFound from './Pages/Shared/NotFound/NotFound';
+import About from './Pages/About/About';
+import MyProtfolio from './Pages/Protfolio/MyProtfolio';
+
+
 
 function App() {
   return (
@@ -24,11 +29,14 @@ function App() {
        <Route path='/home' element={<Home></Home>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/register' element={<Register></Register>}></Route>
+       <Route path='/about' element={<About></About>}></Route>
+       <Route path='/myprotfolio' element={<MyProtfolio></MyProtfolio>}></Route>
        <Route path='/tools' element={
          <RequireAuth>
            <Tools></Tools>
          </RequireAuth>
        }></Route>
+       
        <Route path='/products' element={
          <RequireAuth>
            <Products></Products>
@@ -44,7 +52,9 @@ function App() {
          <Route path='profile' element ={<MyProfile></MyProfile>} ></Route>
        </Route>
        <Route path='/footer' element={<Footer></Footer>}></Route>
+       <Route path='*' element={ <NotFound></NotFound>}></Route>
      </Routes>
+    
      <ToastContainer></ToastContainer>
     </div>
   );
