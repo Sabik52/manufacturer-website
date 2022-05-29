@@ -19,7 +19,10 @@ const OrderModal = ({ order, setOrder }) => {
             orderId: _id,
             order: user.displayName,
             email: user.email,
+            quantity: quantity,
+            price: price,
             phone: event.target.phone.value
+           
         }
         fetch(`http://localhost:5000/orders`,{
             method: 'POST',

@@ -9,7 +9,7 @@ const MyOrder = () => {
     const [user] = useAuthState(auth);
     useEffect(()=> {
        if(user){
-        fetch(`http://localhost:5000/orders?buyer=${user.email}`)
+        fetch(`http://localhost:5000/orders?email=${user.email}`)
         .then(res => res.json())
         .then(data => setOrders(data));
        }
@@ -32,9 +32,9 @@ const MyOrder = () => {
         {
             orders.map((order, index) =>    <tr>
                 <th>{index +1 }</th>
-                <td>{order.name}</td>
+                <td>{order.order}</td>
                 <td>{order.quantity}</td>
-                <td>{order.Price}</td>
+                <td>{order.price}</td>
               </tr>
              )
         }
