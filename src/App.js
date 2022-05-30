@@ -17,6 +17,7 @@ import MyProfile from './Pages/Home/Tools/Dashboard/MyProfile';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import About from './Pages/About/About';
 import MyProtfolio from './Pages/Protfolio/MyProtfolio';
+import Users from './Pages/Home/Tools/Dashboard/Users';
 
 
 
@@ -50,6 +51,7 @@ function App() {
          <Route index element ={<MyOrder></MyOrder>} ></Route>
          <Route path='review' element ={<MyReview></MyReview>} ></Route>
          <Route path='profile' element ={<MyProfile></MyProfile>} ></Route>
+         <Route path='users' element ={<Users></Users>} ></Route>
        </Route>
        <Route path='/footer' element={<Footer></Footer>}></Route>
        <Route path='*' element={ <NotFound></NotFound>}></Route>

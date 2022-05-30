@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const useTool = ()=>{
     const [tool, setTool] = useState([]);
     useEffect(() => {
-        fetch ('http://localhost:5000/parts')
+        fetch ('https://whispering-bastion-71459.herokuapp.com/parts')
         .then(res => res.json())
         .then(data => setTool(data));
     },[])

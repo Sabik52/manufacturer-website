@@ -1,5 +1,7 @@
+import { signOut } from 'firebase/auth';
 import React, {useState, useEffect} from 'react'
 import {useAuthState} from 'react-firebase-hooks/auth'
+import { Navigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
 
 
@@ -9,9 +11,26 @@ const MyOrder = () => {
     const [user] = useAuthState(auth);
     useEffect(()=> {
        if(user){
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
-        .then(res => res.json())
-        .then(data => setOrders(data));
+        fetch(`https://whispering-bastion-71459.herokuapp.com/orders?email=${user.email}`,{
+          method: 'GET',
+          headers:{
+            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+          }
+        })
+        .then(res =>{
+          console.log('res', res);
+           if(res.status===401 ||res.status ===403 ){
+            signOut(auth);
+            localStorage.removeItem('accessToken');
+            Navigate('/');
+          }
+          
+           return res.json()
+        })
+      .then(data =>{
+        setOrders(data);
+      } ); 
+        
        }
     }, [user])
     return (

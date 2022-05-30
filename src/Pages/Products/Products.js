@@ -3,9 +3,11 @@ import useTool from '../../hooks/useTools';
 import Tool from '../Home/Tool/Tool';
 
 import Footer from '../Shared/Footer/Footer';
+import OrderModal from './OrderDetails/OrderModal';
 
 const Products = () => {
     const [tools, setTools] =useTool();
+    const [order, setOrder]= useState(null)
     
     return (
              <div>
@@ -20,6 +22,10 @@ const Products = () => {
                 ></Tool>)
             }
             </div>
+            {order && <OrderModal 
+              order={order}
+              setOrder= {setOrder}
+              ></OrderModal>}
             
             <Footer></Footer>
         </div>

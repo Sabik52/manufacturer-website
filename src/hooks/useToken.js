@@ -13,16 +13,15 @@ const useToken = user => {
                },
                body:JSON.stringify(currentUser)
            })
-           .then(res => res.json() )
+           .then(res=>res.json())
            .then(data => {
-               console.log('data inside useToken', data)
+               console.log('data inside ',data);
                const accessToken = data.token;
-               localStorage.setItem('accessToken', accessToken);
+               localStorage.setItem('accessToken', accessToken)
 
                setToken(accessToken);
-
            })
-
+    
        }
 
     }, [user]);

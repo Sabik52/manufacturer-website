@@ -24,7 +24,7 @@ const OrderModal = ({ order, setOrder }) => {
             phone: event.target.phone.value
            
         }
-        fetch(`http://localhost:5000/orders`,{
+        fetch(`https://whispering-bastion-71459.herokuapp.com/orders`,{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
